@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DOM Teaching Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1 id="main-heading" >This is the Main Heading (id="main-heading")</h1>
+  <button onclick="changeColor()">Change Color</button>
+  <p class="info-text" title="something">This is a paragraph with class="info-text".</p>
+  <p class="info-text" title="something">This is a 2nd paragraph with class="info-text".</p>
+
+  <div id="container">
+    <h2>This is inside a div with id="container"</h2>
+    <p class="child-paragraph another-classname" >This paragraph is a child of the container div</p>
+  </div>
+
+  <ul class="item-list">
+    <li class="list-item">Item 1 (class="list-item")</li>
+    <li class="list-item">Item 2 (class="list-item")</li>
+    <li class="list-item">Item 3 (class="list-item")</li>
+  </ul>
+
+  <p id="change-text">Hello</p>
+  <button onclick="changeText()" id="change-text-btn">Click Me to Change Text</button>
+  <input type="text" id="name-input" placeholder="Type your name here" />
+
+  <div class="box" id="color-box">Box to change color</div>
+
+  <footer>
+    <p>This is a footer</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+
