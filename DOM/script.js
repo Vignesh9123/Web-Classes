@@ -55,3 +55,41 @@ function cb(){
 btn.addEventListener('click', cb)
 
 btn.removeEventListener('click', cb)
+
+
+// Some code in the meet 2:
+
+const inputBox =  document.getElementById("name-input")
+inputBox.addEventListener("input", (event)=>{console.log("Event", event)}) // Observe e.target and e.target.value here
+
+const btn2 = document.getElementById("change-text-btn")
+btn2.addEventListener("click", (e)=>{console.log("Clicked", e)}) // Observe e.target here too
+
+
+// Event Propagation:
+const ptag = document.getElementsByClassName("child-paragraph")[0] // child
+ptag.addEventListener("click", ()=>console.log("Clicked p"))
+
+const container = document.getElementById("container") // parent
+container.addEventListener("click", ()=>console.log("Clicked container"))
+// Click on paragraph inside container and notice console logs
+
+// Stopping event propagation
+
+ptag.addEventListener("click", (e)=>{
+    e.stopPropagation()
+    console.log("Clicked p")
+})
+
+// Now click the para and notice the logs
+
+document.addEventListener("keydown", (e)=>console.log(e)) // Just click on the page somewhere and notice e.key, e.altKey, e.shiftKey, e.ctrlKey for different set of key combinations
+
+
+function formSubmitted(e){
+    e.preventDefault()
+    alert("Form submitted")
+    console.log("name is ", e.target.name.value)
+    console.log("email is ", e.target.email.value)
+}
+
