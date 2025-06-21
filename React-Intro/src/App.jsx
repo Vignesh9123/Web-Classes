@@ -1,10 +1,9 @@
 
 import './App.css'
 import {useState} from 'react';
-import Navbar from './Navbar.jsx'
+import Navbar from './Components/Navbar'
 function App() {
   const [count, setCount] = useState(0)
- 
   function updateCount(){
     setCount(count+1)
   }
@@ -14,8 +13,8 @@ function App() {
   }
  return (
      <div> 
-        <Navbar/>
-        <p>Count is {count} </p>
+        <Navbar credits={4}  />
+        <p >Count is {count} </p>
         <button onClick={updateCount}>Click to increment</button>
         <button onClick={logCount}>Log Count</button>
       </div>    
